@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Way back home - 숀(SHAUN)</title>
+    <title>aoi(푸름) - skanaction(사카낙션)</title>
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +14,7 @@
 
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #1e40af 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -49,7 +50,7 @@
         }
 
         .video-container:hover img {
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .play-button {
@@ -59,7 +60,7 @@
             transform: translate(-50%, -50%);
             width: 80px;
             height: 80px;
-            background: rgba(255, 0, 0, 0.9);
+            background: rgba(14, 165, 233, 0.95);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -69,7 +70,7 @@
 
         .video-container:hover .play-button {
             transform: translate(-50%, -50%) scale(1.1);
-            background: rgba(255, 0, 0, 1);
+            background: rgba(14, 165, 233, 1);
         }
 
         .play-button::after {
@@ -96,7 +97,7 @@
         .song-title {
             font-size: 3em;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #1e3a8a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -106,13 +107,13 @@
 
         .artist-name {
             font-size: 1.5em;
-            color: #764ba2;
+            color: #1e3a8a;
             font-weight: 600;
             letter-spacing: 1px;
         }
 
         .lyrics-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #fef9ff 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #eff6ff 100%);
             padding: 40px;
             border-radius: 20px;
             box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -121,7 +122,7 @@
         .lyrics-title {
             font-size: 1.5em;
             font-weight: 700;
-            color: #333;
+            color: #1f2937;
             margin-bottom: 35px;
             text-align: center;
             position: relative;
@@ -136,22 +137,22 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #0ea5e9, #1e3a8a);
             border-radius: 2px;
         }
 
         .lyrics {
-            line-height: 2.2;
-            color: #2d3748;
-            font-size: 1.1em;
+            line-height: 2.0;
+            color: #111827;
+            font-size: 1.05em;
             white-space: pre-line;
         }
 
         .lyrics-verse {
-            margin-bottom: 35px;
-            padding: 25px;
+            margin-bottom: 28px;
+            padding: 22px;
             background: white;
-            border-radius: 15px;
+            border-radius: 14px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s, box-shadow 0.2s;
             position: relative;
@@ -165,140 +166,246 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(180deg, #667eea, #764ba2);
+            background: linear-gradient(180deg, #0ea5e9, #1e3a8a);
         }
 
         .lyrics-verse:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
         }
 
         .lyrics-verse:last-child {
             margin-bottom: 0;
         }
 
-        /* 첫 번째와 마지막 구절 강조 */
-        .lyrics-verse:first-child,
-        .lyrics-verse:nth-last-child(2) {
-            background: linear-gradient(135deg, #fef9ff 0%, #f5f7fa 100%);
-            border: 2px solid #e9d5ff;
-        }
-
-        .lyrics-verse:first-child::before,
-        .lyrics-verse:nth-last-child(2)::before {
-            width: 6px;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                padding: 30px;
-            }
-
-            .song-title {
-                font-size: 2.2em;
-            }
-
-            .artist-name {
-                font-size: 1.3em;
-            }
-
-            .lyrics-section {
-                padding: 25px;
-            }
-
-            .lyrics {
-                font-size: 1em;
-                line-height: 2;
-            }
-
-            .lyrics-verse {
-                padding: 20px;
-                margin-bottom: 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            .content {
-                padding: 20px;
-            }
-
-            .song-title {
-                font-size: 1.8em;
-            }
-
-            .artist-name {
-                font-size: 1.1em;
-            }
-
-            .lyrics-section {
-                padding: 20px;
-            }
-
-            .lyrics-verse {
-                padding: 15px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="https://www.youtube.com/watch?v=amOSaNX7KJg" target="_blank" class="video-container">
-            <img src="https://img.youtube.com/vi/amOSaNX7KJg/maxresdefault.jpg" alt="Way back home 썸네일">
+        <a href="https://youtu.be/vZpZfHUyVRY?si=BgUua3w8D8t14RGk" target="_blank" class="video-container">
+            <img src="https://img.youtube.com/vi/vZpZfHUyVRY/maxresdefault.jpg" alt="aoi(푸름) 썸네일">
             <div class="play-button"></div>
         </a>
 
         <div class="content">
             <div class="song-info">
-                <h1 class="song-title">Way back home</h1>
-                <p class="artist-name">숀(SHAUN)</p>
+                <h1 class="song-title">aoi(푸름)</h1>
+                <p class="artist-name">skanaction(사카낙션)</p>
             </div>
 
             <div class="lyrics-section">
                 <h2 class="lyrics-title">가사</h2>
                 <div class="lyrics">
-                    <div class="lyrics-verse">멈춘 시간 속 잠든 너를 찾아가
-아무리 막아도 결국 너의 곁인 걸
-길고 긴 여행을 끝내 이젠 돌아가
-너라는 집으로 지금 다시 way back home</div>
+                    <div class="lyrics-verse">青さ 思い出せば また見えた</div>
 
-                    <div class="lyrics-verse">아무리 힘껏 닫아도 다시 열린 서랍 같아
-하늘로 높이 날린 넌 자꾸 내게 되돌아와
-힘들게 삼킨 이별도 다 그대로인 걸 oh oh oh (oh oh oh)</div>
+                    <div class="lyrics-verse">(아오사 오모이다세바 마타 미에타)</div>
 
-                    <div class="lyrics-verse">수없이 떠난 길 위에서 난 너를 발견하고
-비우려 했던 맘은 또 이렇게 너로 차올라
-발걸음의 끝에 늘 네가 부딪혀
-그만, 그만</div>
+                    <div class="lyrics-verse">푸르름을 생각해내면 다시 보였어</div>
 
-                    <div class="lyrics-verse">멈춘 시간 속 잠든 너를 찾아가
-아무리 막아도 결국 너의 곁인 걸
-길고 긴 여행을 끝내 이젠 돌아가
-너라는 집으로 지금 다시 way back home</div>
+                    <div class="lyrics-verse">また見えた</div>
 
-                    <div class="lyrics-verse">조용히 잠든 방을 열어 기억을 꺼내 들어
-부서진 시간 위에서 선명히 너는 떠올라
-길 잃은 맘 속에 널 가둔 채 살아
-그만, 그만</div>
+                    <div class="lyrics-verse">(마타 미에타)</div>
 
-                    <div class="lyrics-verse">멈춘 시간 속 잠든 너를 찾아가
-아무리 막아도 결국 너의 곁인 걸
-길고 긴 여행을 끝내 이젠 돌아가
-너라는 집으로 지금 다시 way back home</div>
+                    <div class="lyrics-verse">다시 보였어</div>
 
-                    <div class="lyrics-verse">세상을 뒤집어 찾으려 해
-오직 너로 완결된 이야기를
-모든 걸 잃어도 난 너 하나면 돼</div>
+                    <div class="lyrics-verse">新しい姿の行く末を 行く末を</div>
 
-                    <div class="lyrics-verse">빛이 다 꺼진 여기 나를 안아줘</div>
+                    <div class="lyrics-verse">(아타라시이 스카타노 유쿠스에오 유쿠스에오)</div>
 
-                    <div class="lyrics-verse">눈을 감으면 소리 없이 밀려와
-이 마음 그 위로 넌 또 한 겹 쌓여가
-내겐 그 누구도 아닌 네가 필요해
-돌아와 내 곁에 그날까지 I'm not done</div>
+                    <div class="lyrics-verse">새로운 모습의 앞날을 앞날을</div>
+
+                    <div class="lyrics-verse">青さ 思い出せば また見えた</div>
+
+                    <div class="lyrics-verse">(아오사 오모이다세바 마타 미에타)</div>
+
+                    <div class="lyrics-verse">푸르름을 생각해내면 다시 보였어</div>
+
+                    <div class="lyrics-verse">また見えた</div>
+
+                    <div class="lyrics-verse">(마타 미에타)</div>
+
+                    <div class="lyrics-verse">다시 보였어</div>
+
+                    <div class="lyrics-verse">若いあの姿と海の音 海の音</div>
+
+                    <div class="lyrics-verse">(와카이 아노 스카타노 우미노 오토 우미노 오토)</div>
+
+                    <div class="lyrics-verse">젊은 그 모습과 바다의 소리 바다의 소리</div>
+
+                    <div class="lyrics-verse">嗚呼 深く青い 青い 青いという</div>
+
+                    <div class="lyrics-verse">(아아 후카쿠아오이 아오이 아오이토유-)</div>
+
+                    <div class="lyrics-verse">아아 깊고 푸른 푸른 푸르름이라는</div>
+
+                    <div class="lyrics-verse">絶高の 絶高の 絶高の世代で</div>
+
+                    <div class="lyrics-verse">(젯코-노 젯코-노 젯코-노 세다이데)</div>
+
+                    <div class="lyrics-verse">절고의 절고의 절고의 세데에서</div>
+
+                    <div class="lyrics-verse">痛い 痛い 痛い 痛いほど</div>
+
+                    <div class="lyrics-verse">(이타이 이타이 이타이 이타이호도)</div>
+
+                    <div class="lyrics-verse">아픈 아픈 아픈 아픔만큼</div>
+
+                    <div class="lyrics-verse">本能で 本能で 本能で踊って</div>
+
+                    <div class="lyrics-verse">(혼노-데 혼노-데 혼노-데 오돗테)</div>
+
+                    <div class="lyrics-verse">본능으로 본능으로 본능으로 춤춰</div>
+
+                    <div class="lyrics-verse">青さ 紙一重の危うさよ 危うさよ</div>
+
+                    <div class="lyrics-verse">(아오사 카미히토에노 아야우사요 아야우사요)</div>
+
+                    <div class="lyrics-verse">파란 종이 한장의 위험함이여 위험함이여</div>
+
+                    <div class="lyrics-verse">それは鮮やかさと 切り捨てた</div>
+
+                    <div class="lyrics-verse">(소레와 아자야카사토 키리스테타)</div>
+
+                    <div class="lyrics-verse">그것은 선명함과 함께 잘라 버렸어</div>
+
+                    <div class="lyrics-verse">切り捨てた</div>
+
+                    <div class="lyrics-verse">(키리스테타)</div>
+
+                    <div class="lyrics-verse">잘라 버렸어</div>
+
+                    <div class="lyrics-verse">嗚呼 深く青い 青い 青いという</div>
+
+                    <div class="lyrics-verse">(아아 후카쿠아오이 아오이 아오이토유-)</div>
+
+                    <div class="lyrics-verse">아아 깊고 푸른 푸른 푸르름이라는</div>
+
+                    <div class="lyrics-verse">絶高の 絶高の 絶高の世代で</div>
+
+                    <div class="lyrics-verse">(젯코-노 젯코-노 젯코-노 세다이데)</div>
+
+                    <div class="lyrics-verse">절고의 절고의 절고의 세데에서</div>
+
+                    <div class="lyrics-verse">痛い 痛い 痛い 痛いほど</div>
+
+                    <div class="lyrics-verse">(이타이 이타이 이타이 이타이호도)</div>
+
+                    <div class="lyrics-verse">아픈 아픈 아픈 아픔만큼</div>
+
+                    <div class="lyrics-verse">本能で 本能で 本能で踊って</div>
+
+                    <div class="lyrics-verse">(혼노-데 혼노-데 혼노-데 오돗테)</div>
+
+                    <div class="lyrics-verse">본능으로 본능으로 본능으로 춤춰</div>
+
+                    <div class="lyrics-verse">青い 青い 青い 青いという</div>
+
+                    <div class="lyrics-verse">(아오이 아오이 아오이 아오이토유-)</div>
+
+                    <div class="lyrics-verse">푸른 푸른 푸른 푸르름이라는</div>
+
+                    <div class="lyrics-verse">劣等感 劣等感 劣等感 捨てて</div>
+
+                    <div class="lyrics-verse">(렛토-칸 렛토-칸 렛토-칸 스테테)</div>
+
+                    <div class="lyrics-verse">열등감 열등감 열등감 버리고</div>
+
+                    <div class="lyrics-verse">痛い 痛い 痛い 痛いほど</div>
+
+                    <div class="lyrics-verse">(이타이 이타이 이타이 이타이호도)</div>
+
+                    <div class="lyrics-verse">아픈 아픈 아픈 아픔만큼</div>
+
+                    <div class="lyrics-verse">本能で 本能で 本能で踊って</div>
+
+                    <div class="lyrics-verse">(혼노-데 혼노-데 혼노-데 오돗테)</div>
+
+                    <div class="lyrics-verse">본능으로 본능으로 본능으로 춤춰</div>
+
+                    <div class="lyrics-verse">君はその若さを抱えては 抱えては</div>
+
+                    <div class="lyrics-verse">(키미와 소노 와카사오 카카에테와 카카에테와)</div>
+
+                    <div class="lyrics-verse">너는 그 젊음을 움켜쥐며 움켜쥐며</div>
+
+                    <div class="lyrics-verse">いつか通り過ぎて変わるだろう</div>
+
+                    <div class="lyrics-verse">(이츠카 토오리스기테 카와루다로-)</div>
+
+                    <div class="lyrics-verse">언젠가 지나쳐서 변하겠지</div>
+
+                    <div class="lyrics-verse">変わるだろう</div>
+
+                    <div class="lyrics-verse">(카와루다로-)</div>
+
+                    <div class="lyrics-verse">변하겠지</div>
+
+                    <div class="lyrics-verse">探すだろう</div>
+
+                    <div class="lyrics-verse">(사가스다로-)</div>
+
+                    <div class="lyrics-verse">찾게되겠지</div>
+
+                    <div class="lyrics-verse">その色は</div>
+
+                    <div class="lyrics-verse">(소노 이로와)</div>
+
+                    <div class="lyrics-verse">그 색은</div>
+
+                    <div class="lyrics-verse">深い青</div>
+
+                    <div class="lyrics-verse">(후카이 아오)</div>
+
+                    <div class="lyrics-verse">깊은 푸름</div>
+
+                    <div class="lyrics-verse">嗚呼 深く青い 青い 青いという</div>
+
+                    <div class="lyrics-verse">(아아 후카쿠아오이 아오이 아오이토유-)</div>
+
+                    <div class="lyrics-verse">아아 깊고 푸른 푸른 푸르름이라는</div>
+
+                    <div class="lyrics-verse">絶高の 絶高の 絶高の世代で</div>
+
+                    <div class="lyrics-verse">(젯코-노 젯코-노 젯코-노 세다이데)</div>
+
+                    <div class="lyrics-verse">절고의 절고의 절고의 세데에서</div>
+
+                    <div class="lyrics-verse">痛い 痛い 痛い 痛いほど</div>
+
+                    <div class="lyrics-verse">(이타이 이타이 이타이 이타이호도)</div>
+
+                    <div class="lyrics-verse">아픈 아픈 아픈 아픔만큼</div>
+
+                    <div class="lyrics-verse">本能で 本能で 本能で踊って</div>
+
+                    <div class="lyrics-verse">(혼노-데 혼노-데 혼노-데 오돗테)</div>
+
+                    <div class="lyrics-verse">본능으로 본능으로 본능으로 춤춰</div>
+
+                    <div class="lyrics-verse">青い 青い 青い 青いという</div>
+
+                    <div class="lyrics-verse">(아오이 아오이 아오이 아오이토유-)</div>
+
+                    <div class="lyrics-verse">푸른 푸른 푸른 푸르름이라는</div>
+
+                    <div class="lyrics-verse">劣等感 劣等感 劣等感 捨てて</div>
+
+                    <div class="lyrics-verse">(렛토-칸 렛토-칸 렛토-칸 스테테)</div>
+
+                    <div class="lyrics-verse">열등감 열등감 열등감 버리고</div>
+
+                    <div class="lyrics-verse">痛い 痛い 痛い 痛いほど</div>
+
+                    <div class="lyrics-verse">(이타이 이타이 이타이 이타이호도)</div>
+
+                    <div class="lyrics-verse">아픈 아픈 아픈 아픔만큼</div>
+
+                    <div class="lyrics-verse">本能で 本能で 本能で踊って</div>
+
+                    <div class="lyrics-verse">(혼노-데 혼노-데 혼노-데 오돗테)</div>
+
+                    <div class="lyrics-verse">본능으로 본능으로 본능으로 춤춰</div>
+
                 </div>
             </div>
         </div>
